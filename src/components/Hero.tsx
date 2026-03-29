@@ -1,7 +1,12 @@
 "use client";
 
 import NextLink from "next/link";
+import { LuGitMerge, LuShield } from "react-icons/lu";
+import { RxCode } from "react-icons/rx";
+import { TbWorld } from "react-icons/tb";
+import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import {
+  Link as ChakraLink,
   Box,
   Button,
   Flex,
@@ -9,6 +14,7 @@ import {
   Link,
   Text,
   VStack,
+  Icon,
 } from "@chakra-ui/react";
 import HeroGridVisual from "./hero/HeroGridVisual";
 import HeroTriangle from "./hero/HeroTriangle";
@@ -18,8 +24,9 @@ export default function Hero() {
     <Box bg="black" color="white" overflow="hidden">
       <HeroTop />
       <SectionDivider />
+      <HeroToolsSection />
       <SectionDivider />
-      <SectionDivider />
+      <HeroEnterpriseSection />
     </Box>
   );
 }
@@ -151,6 +158,126 @@ function HeroTop() {
         >
           <HeroTriangle />
         </Box>
+      </Box>
+    </Flex>
+  );
+}
+
+
+function HeroToolsSection() {
+  return (
+    <Flex justify="center" px={6}>
+      <Box
+        w="100%"
+        maxW="934.4px"
+        minH={{ base: "220px", md: "258px" }}
+        borderLeft="1px solid rgba(255,255,255,0.08)"
+        borderRight="1px solid rgba(255,255,255,0.08)"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        px={6}
+        py={{ base: 12, md: 16 }}
+      >
+        <Box maxW="980px" textAlign="center">
+          <Text
+            fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+            fontWeight="semibold"
+            lineHeight={{ base: "1.3", md: "1.2" }}
+            letterSpacing="-0.03em"
+          >
+            Develop with your favorite tools <Icon verticalAlign="middle"><RxCode /></Icon>
+            <br />
+            Launch globally, instantly <Icon verticalAlign="middle"><TbWorld /></Icon>{" "}
+            Keep pushing <Icon verticalAlign="middle"><LuGitMerge /></Icon>
+          </Text>
+        </Box>
+      </Box>
+    </Flex>
+  );
+}
+
+function HeroEnterpriseSection() {
+  return (
+    <Flex justify="center" px={6}>
+      <Box
+        w="100%"
+        maxW="934.4px"
+        minH={{ base: "120px", md: "129px" }}
+        borderLeft="1px solid rgba(255,255,255,0.08)"
+        borderRight="1px solid rgba(255,255,255,0.08)"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        px={6}
+        py={{ base: 8, md: 10 }}
+      >
+        <Flex
+          maxW="100%"
+          align="center"
+          justify="center"
+          gap={3}
+          textAlign="center"
+          flexWrap="nowrap"
+        >
+          <Text
+            fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+            fontWeight="semibold"
+            lineHeight="1.1"
+            letterSpacing="-0.04em"
+            whiteSpace="nowrap"
+          >
+            Scale your
+          </Text>
+
+          <ChakraLink
+            as={NextLink}
+            href="/enterprise"
+            _hover={{ textDecoration: "none" }}
+          >
+            <Button
+              size="sm"
+              h="40px"
+              px={4}
+              borderRadius="20px"
+              bg="whiteAlpha.100"
+              color="white"
+              _hover={{ bg: "gray.700" }}
+            >
+              <Icon mr={2}><HiOutlineBuildingOffice2 /></Icon>
+              enterprise
+            </Button>
+          </ChakraLink>
+
+          <Text
+            fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+            fontWeight="semibold"
+            lineHeight="1.1"
+            letterSpacing="-0.04em"
+            whiteSpace="nowrap"
+          >
+            without compromising
+          </Text>
+
+          <ChakraLink
+            as={NextLink}
+            href="/security"
+            _hover={{ textDecoration: "none" }}
+          >
+            <Button
+              size="sm"
+              h="40px"
+              px={4}
+              borderRadius="20px"
+              bg="whiteAlpha.100"
+              color="white"
+              _hover={{ bg: "gray.700" }}
+            >
+              <Icon mr={2}><LuShield /></Icon>
+              security
+            </Button>
+          </ChakraLink>
+        </Flex>
       </Box>
     </Flex>
   );
