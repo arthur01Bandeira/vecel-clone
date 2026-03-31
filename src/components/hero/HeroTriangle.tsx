@@ -1,73 +1,34 @@
 import { Box } from "@chakra-ui/react";
 
-export default function HeroGridVisual() {
-  const columns = 12;
-  const rows = 8;
-
-  const shouldRenderCell = (row: number, col: number) => {
-    if (row === 1) return true;
-    if (row >= 2 && row <= 5) return col === 1 || col === 12;
-    if (row >= 6 && row <= 8) return true;
-    return false;
-  };
-
+export default function HeroTriangle() {
   return (
     <Box
-      position="absolute"
-      inset="0"
-      overflow="hidden"
-      zIndex={0}
-      bg="black"
+      w={{ base: "1040px", md: "1040px", lg: "1040px" }}
+      opacity={0.96}
     >
-    <Box
-      position="absolute"
-      inset="0"
-      bg={`
-        radial-gradient(circle at 50% 72%, rgba(255, 240, 120, 0.72), transparent 18%),
-        radial-gradient(circle at 30% 88%, rgba(0, 110, 255, 0.92), transparent 52%),
-        radial-gradient(circle at 38% 42%, rgba(0, 255, 255, 0.42), transparent 30%),
-        radial-gradient(circle at 62% 42%, rgba(255, 220, 60, 0.42), transparent 30%),
-        radial-gradient(circle at 70% 88%, rgba(255, 20, 20, 0.92), transparent 52%)
-      `}
-      filter="blur(44px)"
-      opacity={1}
-    />
-
-      <Box position="absolute" inset="0">
-        {Array.from({ length: rows }).map((_, rowIndex) => {
-          const row = rowIndex + 1;
-
-          return (
-            <Box
-              key={row}
-              position="absolute"
-              left="0"
-              right="0"
-              top={`${((row - 1) / rows) * 100}%`}
-              height={`${100 / rows}%`}
-            >
-              {Array.from({ length: columns }).map((_, colIndex) => {
-                const col = colIndex + 1;
-
-                if (!shouldRenderCell(row, col)) return null;
-
-                return (
-                  <Box
-                    key={`${row}-${col}`}
-                    position="absolute"
-                    left={`${((col - 1) / columns) * 100}%`}
-                    top="0"
-                    width={`${100 / columns}%`}
-                    height="100%"
-                    boxSizing="border-box"
-                    border="1px solid rgba(255,255,255,0.08)"
-                  />
-                );
-              })}
-            </Box>
-          );
-        })}
-      </Box>
+      <svg
+        aria-label="Vercel triangle"
+        viewBox="0 0 1200 700"
+        style={{ width: "100%", height: "auto", display: "block" }}
+        fill="none"
+      >
+        <path fill="black" d="M485 650.4h230L600 451.21z" />
+        <path stroke="rgba(255,255,255,1)" d="M715 650.4 L600 451.21 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.93)" d="M715 650.4 L600 460.33 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.87)" d="M715 650.4 L600 469.44 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.8)" d="M715 650.4 L600 478.56 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.73)" d="M715 650.4 L600 487.67 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.67)" d="M715 650.4 L600 496.79 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.6)" d="M715 650.4 L600 505.9 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.53)" d="M715 650.4 L600 515.02 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.47)" d="M715 650.4 L600 524.13 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.4)" d="M715 650.4 L600 533.25 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.33)" d="M715 650.4 L600 542.36 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.27)" d="M715 650.4 L600 551.48 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.2)" d="M715 650.4 L600 560.59 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.13)" d="M715 650.4 L600 569.71 L485 650.4" />
+        <path stroke="rgba(255,255,255,0.07)" d="M715 650.4 L600 578.82 L485 650.4" />
+      </svg>
     </Box>
   );
 }

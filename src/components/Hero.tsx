@@ -17,7 +17,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import HeroGridVisual from "./hero/HeroGridVisual";
-import HeroTriangle from "./hero/HeroTriangle";
+import HeroTriangle from "./hero/HeroTriangle.tsx"
 
 export default function Hero() {
   return (
@@ -149,7 +149,7 @@ function HeroTop() {
 
         <Box
           position="absolute"
-          top={{ base: "80px", md: "80px" }}
+          top={{ base: "163px", md: "163px" }}
           left="50%"
           transform="translateX(-50%)"
           zIndex={1}
