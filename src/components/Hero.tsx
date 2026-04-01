@@ -17,7 +17,7 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import HeroGridVisual from "./hero/HeroGridVisual";
-import HeroTriangle from "./hero/HeroTriangle.tsx"
+import HeroTriangle from "./hero/HeroTriangle"
 
 export default function Hero() {
   return (
@@ -37,7 +37,7 @@ function SectionDivider() {
     <Flex justify="center" px={6}>
       <Box
         w="100%"
-        maxW="1038.4px"
+        maxW="932px"
         borderTop="1px solid rgba(255,255,255,0.08)"
       />
     </Flex>
