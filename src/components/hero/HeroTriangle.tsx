@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react";
 export default function HeroTriangle() {
   return (
     <Box
-      w={{ base: "1040px", md: "1040px", lg: "1040px" }}
+      w={{ base: "800px", md: "1000px", lg: "1200px" }}
       opacity={0.96}
     >
       <svg
