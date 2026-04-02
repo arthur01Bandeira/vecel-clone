@@ -2,43 +2,44 @@ import Category from "../Category";
 import Item from "../Item";
 import { SimpleGrid } from "@chakra-ui/react";
 import {
-  FiCode,
-  FiCpu,
+  FiUsers,
+  FiBookOpen,
+  FiClock,
+  FiMic,
+  FiCalendar,
+  FiFileText,
+  FiAward,
+  FiHelpCircle,
+  FiMessageCircle,
+  FiTriangle,
   FiGlobe,
-  FiUser,
-  FiBox,
-  FiGitBranch,
-  FiSend,
-  FiServer,
-  FiActivity,
-  FiShield,
-  FiLock,
-  FiEye,
+  FiZap,
+  FiPackage,
 } from "react-icons/fi";
 
-export default function Products() {
+export default function Resources() {
   return (
     <SimpleGrid columns={3} gap={4}>
-      <Category title="AI Cloud">
-        <Item title="v0" desc="Build Aplications with AI" href="/v0" icon={FiCode} />
-        <Item title="AI SDK" desc="The AI Toolkit for JavaScript" href="/ai" icon={FiCpu} />
-        <Item title="AI Gateway" desc="One Endpoint, All yout Models" href="/ai/gateway" icon={FiGlobe} />
-        <Item title="Vercel Agent" desc="An agent tha knows your stack" href="/agent" icon={FiUser} />
-        <Item title="SandBox" desc="AI workflows in live enviroments" href="/sandbox" icon={FiBox} />
+      <Category title="Company">
+        <Item title="Customers" desc="Trusted by de best teams" href="/customers" icon={FiUsers} />
+        <Item title="Blod" desc="The latesst posts and changes" href="/blog" icon={FiBookOpen} />
+        <Item title="Changelog" desc="see what shipped" href="/changelog" icon={FiClock} />
+        <Item title="Press" desc="Read the latest news" href="/press" icon={FiMic} />
+        <Item title="Events" desc="Join us at an event" href="/events" icon={FiCalendar} />
       </Category>
 
-      <Category title="Core Platform">
-        <Item title="CI/CD" desc="Helping teams ships 6x faster" href="/features/ci-cd" icon={FiGitBranch} />
-        <Item title="Content Delivery" desc="Fast, scalable and reliable" href="/features/content-delivery" icon={FiSend} />
-        <Item title="Fluid Compute" desc="Services, in serverless form" href="/features/fluid-compute" icon={FiServer} />
-        <Item title="Observability" desc="Track every step" href="/features/observability" icon={FiActivity} />
+      <Category title="Learn">
+        <Item title="Docs" desc="Vercel Documents" href="/docs" icon={FiFileText} />
+        <Item title="Academy" desc="Linear courses to level up" href="/academy" icon={FiAward} />
+        <Item title="Knowledge base" desc="Find help quiclky" href="/help" icon={FiHelpCircle} />
+        <Item title="Comunity" desc="Join the conversation" href="/community" icon={FiMessageCircle} />
       </Category>
 
-      <Category title="Security">
-        <Item title="Bot management" desc="Scalable bot protection" href="/features/bot-management" icon={FiShield} />
-        <Item title="Bot ID" desc="Invisible CAPTCHA" href="/features/botid" icon={FiLock} />
-        <Item title="Platform Secutiry" desc="DDos protection, firewall" href="/security" icon={FiShield} />
-        <Item title="Web Aplication firewall" desc="Granular, custom protection" href="/security/firewall" icon={FiEye} />
+      <Category title="Open Source">
+        <Item title="Next.js" desc="The native Next.js platform" href="/frameworks/nextjs" icon={FiTriangle} />
+        <Item title="Nuxt" desc="The progressive web framework" href="/frameworks/nuxt" icon={FiGlobe} />
+        <Item title="Sveltle" desc="The web efficient UI framework" href="/frameworks/sveltekit" icon={FiZap} />
+        <Item title="Turbo repo" desc="Speed with Enterprise scale" href="/templates/turborepo" icon={FiPackage} />
       </Category>
     </SimpleGrid>
   );
