@@ -2,8 +2,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata = {
-  title: "Vercel Clone",
-  description: "Clone",
+  title: "Vercel",
 };
 
 export default function RootLayout({

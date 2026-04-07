@@ -18,17 +18,17 @@ export default function Solutions() {
   return (
     <SimpleGrid columns={3} gap={4}>
       <Category title="Use cases">
-        <Item title="AI apps" desc="Deploy in speed of AI" href="/solutions/ai" icon={FiCpu} />
+        <Item title="AI apps" desc="Deploy in speed of AI" href="/ai" icon={FiCpu} />
         <Item title="Composable commerce" desc="Power storefonts that converts" href="/solutions/composable-commerce" icon={FiShoppingBag} />
         <Item title="Marketing sites" desc="Launch campaings faster" href="/solutions/marketing-sites" icon={FiLayout} />
-        <Item title="Multi-tenant platform" desc="Scale apps with one codebase" href="/solutions/multi-tenant" icon={FiLayers} />
+        <Item title="Multi-tenant platform" desc="Scale apps with one codebase" href="/solutions/multi-tenant-saas" icon={FiLayers} />
         <Item title="Web apps" desc="Ship features, not infrastructure" href="/solutions/web-apps" icon={FiMonitor} />
       </Category>
 
       <Category title="Tools">
         <Item title="Marketplace" desc="Extend and automate workflows" href="/marketplace" icon={FiGrid} />
         <Item title="Templates" desc="Jumpstart app development" href="/templates" icon={FiFileText} />
-        <Item title="Partner Finder" desc="Get help from solution partners" href="/partners" icon={FiUsers} />
+        <Item title="Partner Finder" desc="Get help from solution partners" href="/partners/solution-partners" icon={FiUsers} />
       </Category>
 
       <Category title="Users">
