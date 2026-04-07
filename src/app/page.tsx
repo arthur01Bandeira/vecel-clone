@@ -2,6 +2,13 @@ import { Box } from "@chakra-ui/react";
 import Navbar from "../components/navbar/NavBar";
 import Hero from "../components/Hero";
 import Footer from "../components/footer/Footer";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: "Vercel",
+    description: "Implementando desenvolvimento web"
+}
 
 export default function Home() {
   return (

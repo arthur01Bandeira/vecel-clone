@@ -17,7 +17,7 @@ import Dropdown from "./Dropdown";
 
 const MotionBox = motion(Box);
 
-const menuOrder = ["Products", "Solutions", "Resources"];
+const menuOrder = ["Products", "Resources", "Solutions"];
 
 export default function Navbar() {
   const [active, setActiveState] = useState<string | null>(null);

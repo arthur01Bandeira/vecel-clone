@@ -67,21 +67,19 @@ function HeroTop() {
           <HeroGridVisual />
         </Box>
 
-        <Flex
-          position="absolute"
-          top="0"
-          left="50%"
-          transform="translateX(-50%)"
-          w="100%"
-          maxW="836.75px"
-          h={{ base: "320px", md: "334.1px" }}
-          zIndex={2}
-          direction="column"
-          align="center"
-          justify="center"
-          textAlign="center"
-          px={{ base: 6, md: 10 }}
-        >
+       <Flex
+  position="absolute"
+  top={`${100 / 8}%`}
+  left={`${100 / 12}%`}
+  width={`${(10 / 12) * 100}%`}
+  height={`${(4 / 8) * 100}%`}
+  zIndex={2}
+  direction="column"
+  align="center"
+  justify="center"
+  textAlign="center"
+  px={{ base: 6, md: 10 }}
+>
           <VStack gap={{ base: 4, md: 6 }} maxW="788.75px">
             <Text
               fontSize="5xl"
@@ -149,14 +147,14 @@ function HeroTop() {
 
         <Box
           position="absolute"
-          top={{ base: "163px", md: "163px" }}
+          top={{ base: "65px", md: "65px" }}
           left="50%"
           transform="translateX(-50%)"
           zIndex={1}
           pointerEvents="none"
           display="flex"
           justifyContent="center"
-          w="100%"
+          w="140%"
         >
           <HeroTriangle />
         </Box>
